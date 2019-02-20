@@ -1,0 +1,66 @@
+/*HTML Sittings*/
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+img {
+    height: 300px;
+    width: 300px;
+}
+/*Wrapper*/
+
+/*Header*/
+.logo {
+    padding-top: 20px;
+}
+.Logo__Name_Black {
+    font-family: HelveticaNeue-Bold;
+    font-size: 60px;
+    color: #000000;
+    text-align: left;
+    padding-left: 5rem;
+}
+.Logo__Name_Blue {
+    font-family: HelveticaNeue-Bold;
+    font-size: 29px;
+    color: #86C1DA;
+    letter-spacing: -0.3px;
+    line-height: 31px;
+    text-align: left;
+    padding-left: 5rem;
+}
+/*Main*/
+.Main {
+    text-align: center;
+}
+/*Catalog*/
+.Catalog__Head {
+    font-family: HelveticaNeue-Light;
+    font-size: 40px;
+    color: #000000;
+    text-align: center;
+}
+.Catalog__grid {
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+    justify-content: center;
+    text-align: center;
+}
+.Catalog__Items {
+    text-align: center;
+    margin: 10px;
+}
+.Buttons__Input_Default:checked ~ .Catalog__grid > .Catalog__Items {
+    order: var(--default);
+}
+.Buttons__Input_Low:checked ~ .Catalog__grid > .Catalog__Items,
+.Buttons__Input_High:checked ~ .Catalog__grid > .Catalog__Items {
+    order: var(--cost);
+}
+.Buttons__Input_High:checked ~ .Catalog__grid {
+    flex-flow: wrap-reverse;
+    flex-direction: row-reverse;
+}
+
